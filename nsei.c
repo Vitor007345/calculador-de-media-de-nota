@@ -11,9 +11,25 @@ int main(){
     printf("Calcule c vc passou\n");
     printf("\n Digite quantas provas vc teve: ");
     scanf("%i",&Tprovas);
+    for (int i = 0; i < 1; i++){
+        if (Tprovas <= 0 || Tprovas > 100){
+            printf("\nValor invalido\nNúmero negativo ou muito grande\n");
+            printf("\nDigite o número de provas novamente: ");
+            scanf("%i",&Tprovas);
+            i--;
+        }
+    }
     Tprovas1 = Tprovas - 1;
     printf("Qual a nota max de sua provas? Digite aqui: ");
     scanf("%i",&notamax);
+    for (int i = 0; i < 1; i++){
+        if (notamax <= 0){
+            printf("\nValor invalido\nNúmero negativo ou muito grande\n");
+            printf("\nDigite a nota maxima novamente: ");
+            scanf("%i",&notamax);
+            i--;
+        }
+    }
 
     float nota[Tprovas1];
     float media;
